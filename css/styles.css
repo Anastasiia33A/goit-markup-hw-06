@@ -625,19 +625,28 @@ margin-right: 24px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer; 
+    color: #000;
 
    transition: box-shadow 250ms var(--timing-function),
     border 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .button-close:hover {
+    
 border: 1px solid rgb(0 0 0 / 0);
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .button-close:active {
+    color: #fff;
     background-color: var(--pressed-ocean);
     border-radius: 50%;
 }
+.modal-close {
+    fill: currentColor;
+}
 .modal-close:active {
+    fill: #FFFFFF;
+}
+.button-close:active + .modal-close{
     fill: #FFFFFF;
 }
 .form{
@@ -712,11 +721,11 @@ height: 584px;
 }
 .form-icon:focus{
     fill: var(--primary-brand-color);
+    border: 1px solid var(--primary-brand-color);
+    outline: none;
 }
-.form-input:focus + .form-icon:focus {
-    fill: var(--primary-brand-color);
-    outline: 1px solid var(--primary-brand-color);
-    border: transparent;
+.form-input:focus + .form-icon {
+    fill: var(--primary-brand-color)
 }
 .modal-form-checkbox {
     position: absolute;
@@ -770,6 +779,8 @@ height: 584px;
     height: 120px;
     margin-top: 8px;
     margin-bottom: 4px;
+    padding-top: 8px;
+    padding-left: 16px;
     resize: none;
 
     font-style: normal;
@@ -860,10 +871,10 @@ height: 584px;
    
 }
 .subscribe-button {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
     align-items: center;
-    padding: 8px 24px;
+    justify-content: center;
+   padding: 8px 24px 8px 24px;
     
     width: 165px;
     height: 40px;
@@ -876,12 +887,15 @@ height: 584px;
 
 .form-footer {
     display: flex;
+}
+.submit-svg{
     position: relative;
 }
-.subscribe-text {position: absolute;
-    top: 20%;
-    right: 15%;
-    transform: translateY(20%);
+.subscribe-text {
+    position: absolute;
+    bottom: 15%;
+    left: 19px;
+    transform: translateY(-15%);
     font-family: 'Roboto',
         sans-serif;
     font-style: normal;
@@ -895,8 +909,7 @@ height: 584px;
      color: #FFFFFF;
 }
 .subscribe-icon {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-    transform: translateY(20%);
+    display: inline-flex;
+    margin-bottom: -5px;
+    margin-left: 16px;
 }
