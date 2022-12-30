@@ -743,6 +743,7 @@ height: 584px;
     align-items: baseline;
     padding-top: 16px;
     padding-bottom: 24px;
+     margin-left: 24px;
 }
 .modal-form-custom-checkbox{
     display: inline-flex;
@@ -760,6 +761,7 @@ height: 584px;
     align-items: center;
     justify-content: center;
     opacity: 0;
+    transition: opacity 250ms var(--timing-function);
 }.modal-form-checkbox:checked + .modal-form-custom-checkbox {
     background-color: var(--pressed-ocean);
     border: 1px solid var(--pressed-ocean);
@@ -834,6 +836,7 @@ height: 584px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: var(--primary-brand-color);
+    transition: border 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 .form-container {
     display: flex;
